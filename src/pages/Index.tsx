@@ -139,6 +139,23 @@ const cases = [
       alt: "Feedback Barbearia WhatsApp"
     }
   },
+  {
+    icon: <MessageSquare size={20} />,
+    title: "Pix mais rápido via WhatsApp",
+    color: "text-green-400",
+    desc: (
+      <>
+        <b>Desafio:</b> Receber pagamentos e confirmações de agendamento de forma manual, demorando para os clientes e para o negócio.<br />
+        <b>Solução:</b> Automatização total do processo: agendamento envia o QR Code do Pix e confirma horários automaticamente pelo WhatsApp.<br />
+        <b>Resultado:</b> Dados e comprovantes recebidos em minutos, com feedback positivo dos clientes.
+      </>
+    ),
+    thumb: {
+      label: "🖼️ Print real da conversa automatizada Pix:",
+      src: "/lovable-uploads/c913bbf4-7caa-46d7-9a45-c0f06262e363.png",
+      alt: "Conversa de feedback Pix WhatsApp"
+    }
+  },
 ];
 
 const Index = () => {
