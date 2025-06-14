@@ -1,3 +1,4 @@
+
 import { Zap, CalendarCheck2, Bot, Link2, Scissors, Users2, MessageSquare, Brain } from "lucide-react";
 
 const testimonials = [
@@ -12,6 +13,46 @@ const testimonials = [
   {
     quote: "Consegui integrar WhatsApp, planilhas e IA. Facilidade absurda.",
     author: "Lucas, Gestor de Tráfego"
+  },
+  {
+    quote: "Minha papelaria virou digital. O atendimento automático salvou meu tempo!",
+    author: "Patrícia, Papelaria do Sul"
+  },
+  {
+    quote: "Economizei com sistema próprio de respostas automáticas para clientes do salão.",
+    author: "Silvia, Cabeleireira RJ"
+  },
+  {
+    quote: "Ficou muito mais fácil organizar as reservas, tudo flui no WhatsApp!",
+    author: "Marcos, Restaurante Minas"
+  },
+  {
+    quote: "Agora toda a minha equipe recebe avisos certinho, integração perfeita.",
+    author: "Cláudia, Boutique do Centro"
+  },
+  {
+    quote: "Achei que seria caro, mas ficou acessível e super fácil de usar!",
+    author: "Jorge, Hamburgueria SP"
+  },
+  {
+    quote: "Meus clientes estão surpresos com o atendimento automático. Nota dez!",
+    author: "Tatiane, Moda Recife"
+  },
+  {
+    quote: "Não erro mais pedidos, todas as mensagens entram organizadas no sistema.",
+    author: "Felipe, Pizzaria Zona Norte"
+  },
+  {
+    quote: "O fluxo de leads ficou redondinho, parei de perder contatos!",
+    author: "Amanda, Imobiliária Sul"
+  },
+  {
+    quote: "Foi só automatizar para ver o movimento dobrar no estúdio.",
+    author: "Rafael, Estúdio Tattoo MG"
+  },
+  {
+    quote: "Facilitou muito o acompanhamento dos agendamentos e pagamentos.",
+    author: "Bruna, Clínica Vida PE"
   }
 ];
 
@@ -176,3 +217,4 @@ const Index = () => {
 };
 
 export default Index;
+
