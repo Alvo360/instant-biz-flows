@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -59,7 +58,8 @@ export default {
 				sm: '0.75rem'
 			},
 			fontFamily: {
-				sans: ['Inter', 'ui-sans-serif', 'system-ui']
+				sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+				playfair: ['Playfair Display', 'serif'],
 			},
 			backgroundImage: {
 				'gradient-glass': 'radial-gradient(at 80% 20%,rgba(37,99,235,0.20) 0,rgba(0,0,0,0) 80%),radial-gradient(at 20% 80%,rgba(225,29,72,0.16) 0,rgba(0,0,0,0) 100%),linear-gradient(120deg,#131722 0,#232a3b 100%)'
@@ -72,4 +72,3 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
