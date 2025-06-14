@@ -1,5 +1,6 @@
 import { Zap, CalendarCheck2, Bot, Link2, Scissors, Users2, MessageSquare, Brain } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import * as React from "react";
 
 const testimonials = [
   {
@@ -53,10 +54,61 @@ const testimonials = [
   {
     quote: "Facilitou muito o acompanhamento dos agendamentos e pagamentos.",
     author: "Bruna, Clínica Vida PE"
-  }
+  },
+  {
+    quote: "A automação inspira confiança para meus clientes digitais!",
+    author: "Danilo, Agência Web Bahia"
+  },
+  {
+    quote: "Aumentou o volume e a qualidade no atendimento rápido.",
+    author: "Janaina, Delivery Express AL"
+  },
+  {
+    quote: "Atendimento bem mais ágil, nunca mais perdi venda.",
+    author: "Fábio, Lojas Paris Fortaleza"
+  },
+  {
+    quote: "Sistema rodando liso, aprovadíssimo!",
+    author: "Cristiane, Floricultura Natal"
+  },
+  {
+    quote: "Meus parceiros elogiam a integração com Notion e CRM.",
+    author: "Paulo César, Consultor São Paulo"
+  },
+  {
+    quote: "Muito melhor que pagar sistemas caros, resolveu e ficou prático.",
+    author: "Luiza, Beauty House Goiás"
+  },
+  {
+    quote: "Só elogios dos meus clientes, tudo automatizado e rápido.",
+    author: "Roberto, Escritório Recife"
+  },
 ];
 
+// Embla: autoplay plugin (simples)
+function useEmblaAutoplay(api: any, delay = 3400) {
+  React.useEffect(() => {
+    if (!api) return;
+    let timeout: any = null;
+    const play = () => {
+      timeout = setTimeout(() => {
+        api.scrollNext();
+      }, delay);
+    };
+    api.on("select", play);
+    play();
+    return () => {
+      api.off("select", play);
+      clearTimeout(timeout);
+    };
+  }, [api, delay]);
+}
+
 const Index = () => {
+  // Embla instance for autoplay
+  const [emblaApi, setEmblaApi] = React.useState<any>(null);
+  useEmblaAutoplay(emblaApi);
+
   return (
     <div className="relative min-h-screen py-8 px-0 bg-transparent flex flex-col">
       {/* Pontos de luz/glow */}
@@ -158,36 +210,35 @@ const Index = () => {
         <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">
           Depoimentos Verdadeiros
         </h2>
-        <div className="w-full flex flex-col md:flex-row gap-6 px-4">
-          {/* 3 primeiros depoimentos fixos */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
-            {testimonials.slice(0, 3).map((t, i) => (
-              <div key={i} className="glass-card p-6 flex flex-col gap-5 items-start animate-fade-in">
-                <MessageSquare size={24} className="text-primary" />
-                <div className="text-lg font-normal italic text-white">{`“${t.quote}”`}</div>
-                <div className="text-sm text-slate-300">{t.author}</div>
-              </div>
-            ))}
-          </div>
-          {/* Demais depoimentos em carrossel */}
-          <div className="md:w-1/3 md:ml-2 w-full mt-6 md:mt-0 flex flex-col justify-center">
-            <Carousel
-              opts={{ loop: true }}
-              className="w-full max-w-xs mx-auto"
-            >
-              <CarouselContent>
-                {testimonials.slice(3).map((t, i) => (
-                  <CarouselItem key={i}>
-                    <div className="glass-card p-6 flex flex-col gap-5 items-start">
-                      <MessageSquare size={24} className="text-primary" />
-                      <div className="text-lg font-normal italic text-white">{`“${t.quote}”`}</div>
-                      <div className="text-sm text-slate-300">{t.author}</div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
+        <div className="w-full px-4 flex">
+          <Carousel
+            opts={{
+              loop: true,
+              align: "start",
+            }}
+            setApi={setEmblaApi}
+            className="w-full max-w-3xl mx-auto"
+          >
+            <CarouselContent>
+              {testimonials.map((t, i) => (
+                <CarouselItem
+                  key={i}
+                  className="
+                    md:basis-1/2
+                    xl:basis-1/3
+                    basis-full
+                    flex
+                  "
+                >
+                  <div className="glass-card flex-1 p-6 flex flex-col gap-5 items-start animate-fade-in h-full">
+                    <MessageSquare size={24} className="text-primary" />
+                    <div className="text-lg font-normal italic text-white">{`“${t.quote}”`}</div>
+                    <div className="text-sm text-slate-300">{t.author}</div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
 
