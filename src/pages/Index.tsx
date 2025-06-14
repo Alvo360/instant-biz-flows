@@ -1,5 +1,5 @@
-
 import { Zap, CalendarCheck2, Bot, Link2, Scissors, Users2, MessageSquare, Brain } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -154,16 +154,40 @@ const Index = () => {
       </section>
 
       {/* Depoimentos */}
-      <section className="mt-14 z-10">
-        <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">Depoimentos Verdadeiros</h2>
-        <div className="grid md:grid-cols-3 gap-6 px-4">
-          {testimonials.map((t,i) =>
-            <div key={i} className="glass-card p-6 flex flex-col gap-5 items-start">
-              <MessageSquare size={24} className="text-primary" />
-              <div className="text-lg font-normal italic text-white">{`“${t.quote}”`}</div>
-              <div className="text-sm text-slate-300">{t.author}</div>
-            </div>
-          )}
+      <section className="mt-14 z-10 w-full flex flex-col items-center">
+        <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">
+          Depoimentos Verdadeiros
+        </h2>
+        <div className="w-full flex flex-col md:flex-row gap-6 px-4">
+          {/* 3 primeiros depoimentos fixos */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
+            {testimonials.slice(0, 3).map((t, i) => (
+              <div key={i} className="glass-card p-6 flex flex-col gap-5 items-start animate-fade-in">
+                <MessageSquare size={24} className="text-primary" />
+                <div className="text-lg font-normal italic text-white">{`“${t.quote}”`}</div>
+                <div className="text-sm text-slate-300">{t.author}</div>
+              </div>
+            ))}
+          </div>
+          {/* Demais depoimentos em carrossel */}
+          <div className="md:w-1/3 md:ml-2 w-full mt-6 md:mt-0 flex flex-col justify-center">
+            <Carousel
+              opts={{ loop: true }}
+              className="w-full max-w-xs mx-auto"
+            >
+              <CarouselContent>
+                {testimonials.slice(3).map((t, i) => (
+                  <CarouselItem key={i}>
+                    <div className="glass-card p-6 flex flex-col gap-5 items-start">
+                      <MessageSquare size={24} className="text-primary" />
+                      <div className="text-lg font-normal italic text-white">{`“${t.quote}”`}</div>
+                      <div className="text-sm text-slate-300">{t.author}</div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </section>
 
@@ -217,4 +241,3 @@ const Index = () => {
 };
 
 export default Index;
-
