@@ -1,4 +1,3 @@
-
 import { Zap, CalendarCheck2, Bot, Link2, Scissors, Users2, MessageSquare, Brain } from "lucide-react";
 
 const testimonials = [
@@ -83,31 +82,31 @@ const Index = () => {
         <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">Casos Reais de Automação</h2>
         <div className="flex flex-col md:flex-row gap-8 justify-center px-4">
           <div className="glass-card md:w-1/2 p-7 flex flex-col gap-3">
-            <div className="flex items-center gap-2 mb-1 text-red-400 font-semibold">
-              <Scissors size={20}/> Barbearia Automatizada
+            <div className="flex items-center gap-2 mb-1 text-indigo-300 font-semibold">
+              <Users2 size={20}/> Loja automatizada com WhatsApp
             </div>
             <div className="text-sm text-slate-200 mb-2">
-              <b>Desafio:</b> Atendimento manual no WhatsApp.
-              <br/><b>Solução:</b> Bot n8n + Google Calendar automatizando agendamentos.
-              <br/><b>Resultado:</b> Mais de 50 clientes atendidos sem travamentos, tempo otimizado.
+              <b>Desafio:</b> Loja online gastando muito tempo atendendo manualmente clientes no WhatsApp.<br/>
+              <b>Solução:</b> Criação de bot usando n8n integrado ao WhatsApp, automatizando todo o fluxo de atendimento.<br/>
+              <b>Resultado:</b> Atendimentos 100% automáticos, zero travamento e ótimos feedbacks de clientes.
             </div>
             <div className="w-full flex flex-col gap-1">
-              <span className="text-xs text-slate-400 mb-1">🖼️ Print real da conversa com a cliente:</span>
-              <img src="/lovable-uploads/8a24b4e6-dcd2-4e52-bdd6-a93f56b5c877.png" alt="Conversa WhatsApp Cliente" className="rounded-xl border border-muted object-cover w-full max-w-xs mx-auto shadow-md" />
+              <span className="text-xs text-slate-400 mb-1">🖼️ Print real de depoimento de cliente da loja:</span>
+              <img src="/lovable-uploads/8a24b4e6-dcd2-4e52-bdd6-a93f56b5c877.png" alt="Depoimento Loja WhatsApp" className="rounded-xl border border-muted object-cover w-full max-w-xs mx-auto shadow-md" />
             </div>
           </div>
           <div className="glass-card md:w-1/2 p-7 flex flex-col gap-3">
             <div className="flex items-center gap-2 mb-1 text-blue-400 font-semibold">
-              <Users2 size={20}/> CRM Integrado com WhatsApp
+              <Scissors size={20}/> Barbearia com agendamento automático
             </div>
             <div className="text-sm text-slate-200 mb-2">
-              <b>Desafio:</b> Perda de leads por falta de organização.
-              <br/><b>Solução:</b> CRM no Notion conectado via n8n ao WhatsApp.
-              <br/><b>Resultado:</b> Leads organizados, alertas automáticos e histórico completo.
+              <b>Desafio:</b> Barbearia perdendo horários por falta de organização nos agendamentos.<br/>
+              <b>Solução:</b> Integração do WhatsApp com agenda e notificações automáticas usando n8n.<br/>
+              <b>Resultado:</b> Agendas lotadas sem esforço manual e clientes elogiando a praticidade.
             </div>
             <div className="w-full flex flex-col gap-1">
-              <span className="text-xs text-slate-400 mb-1">🖼️ Print real de feedback:</span>
-              <img src="/lovable-uploads/2190f266-8ef3-48c7-b3f4-c475c1bac78b.png" alt="Conversa WhatsApp CRM" className="rounded-xl border border-muted object-cover w-full max-w-xs mx-auto shadow-md" />
+              <span className="text-xs text-slate-400 mb-1">🖼️ Print real do feedback no WhatsApp:</span>
+              <img src="/lovable-uploads/2190f266-8ef3-48c7-b3f4-c475c1bac78b.png" alt="Feedback Barbearia WhatsApp" className="rounded-xl border border-muted object-cover w-full max-w-xs mx-auto shadow-md" />
             </div>
           </div>
         </div>
