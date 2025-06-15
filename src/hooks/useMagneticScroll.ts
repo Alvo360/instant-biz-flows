@@ -3,13 +3,13 @@ import { useRef, useEffect } from "react";
 
 /**
  * Hook para efeito magnético/scroll parallax.
- * Retorna uma ref e um estilo de transformação baseado no scroll.
+ * Retorna uma ref e aplica transformação baseada no scroll via style diretamente.
  * 
  * @param strength intensifica o efeito, padrão 55 (menor = mais sutil)
  */
 export function useMagneticScroll(strength = 55) {
   const ref = useRef<HTMLDivElement>(null);
-  const [style, setStyle] = useRef<any>({ transform: "none" });
+  const styleRef = useRef<any>({ transform: "none" });
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -26,15 +26,15 @@ export function useMagneticScroll(strength = 55) {
       // Efeito é mais forte às margens da tela e zera no centro
       const scale = 1 + Math.abs(factor) * 0.09; // ajuste para naturalidade
       const translateZ = factor * -strength; // px (simula vinda pra frente/trás)
-      setStyle.current = {
+      styleRef.current = {
         transform: `perspective(900px) translateZ(${translateZ}px) scale(${scale.toFixed(3)})`,
         willChange: "transform",
         transition: "transform 0.28s cubic-bezier(.55,.15,.36,1)",
       };
       // Força render
       if (ref.current) {
-        (ref.current as any).style.transform = setStyle.current.transform;
-        (ref.current as any).style.transition = setStyle.current.transition;
+        (ref.current as any).style.transform = styleRef.current.transform;
+        (ref.current as any).style.transition = styleRef.current.transition;
       }
     }
 
@@ -60,3 +60,4 @@ export function useMagneticScroll(strength = 55) {
 
   return ref;
 }
+
