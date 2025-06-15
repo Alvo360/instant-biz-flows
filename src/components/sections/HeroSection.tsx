@@ -1,4 +1,3 @@
-
 import { Zap } from "lucide-react";
 import * as React from "react";
 
@@ -18,7 +17,7 @@ const HeroSection = () => {
           Soluções personalizadas em automação, integrações e inteligência artificial sob medida. Tudo visual, transparente e sem código complexo.
         </p>
         <a
-          href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20de%20automa%C3%A7%C3%A3o."
+          href="https://wa.me/5519971259836?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20automa%C3%A7%C3%A3o."
           className="glass-btn flex gap-2 items-center mt-3 shadow-glass text-base xs:text-lg px-8 py-4 md:py-3"
           style={{
             background: "linear-gradient(90deg,#70a1e9 0,#22293d 100%)",
@@ -32,7 +31,7 @@ const HeroSection = () => {
           rel="noopener"
         >
           <Zap size={24} />
-          🚀 Solicite uma demo grátis
+          💸 Peça seu orçamento
         </a>
         <div className="flex flex-wrap gap-2 justify-center text-xs mt-4 text-slate-400 font-normal">
           <span className="px-3 py-1 rounded bg-black/20 backdrop-blur-sm">Atendimento <b>pessoal</b> e <b>rápido</b></span>
