@@ -177,7 +177,7 @@ const CasosReaisSection = () => {
             {cases.map((c, i) => (
               <CarouselItem
                 key={i}
-                className="basis-full md:basis-1/2 flex"
+                className="basis-full sm:basis-1/2 lg:basis-1/3 flex"
               >
                 <div className="glass-card flex-1 p-7 flex flex-col gap-3 animate-fade-in h-full">
                   <div
