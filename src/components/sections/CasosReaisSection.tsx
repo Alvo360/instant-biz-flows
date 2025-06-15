@@ -1,4 +1,5 @@
-import { Users2, Scissors, MessageSquare } from "lucide-react";
+
+import { Users2, Scissors, MessageSquare, ThumbsUp } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import * as React from "react";
 
@@ -53,6 +54,71 @@ const cases = [
       label: "🖼️ Print real da conversa automatizada Pix:",
       src: "/lovable-uploads/c913bbf4-7caa-46d7-9a45-c0f06262e363.png",
       alt: "Conversa de feedback Pix WhatsApp"
+    }
+  },
+  // --- NOVOS CASOS REAIS COM OS PRINTS ENVIADOS
+  {
+    icon: <ThumbsUp size={20} />,
+    title: "Automação de energia - Revolt Cliente",
+    color: "text-violet-300",
+    desc: (
+      <>
+        <b>Desafio:</b> Otimizar e economizar energia com automação sob medida.<br />
+        <b>Resultado:</b> "Tudo rodando liso e sem dor de cabeça. Muito obrigado!"
+      </>
+    ),
+    thumb: {
+      label: "🖼️ Print de conversa real - Revolt Cliente:",
+      src: "/lovable-uploads/9d44c6ab-18b5-4f8c-bba4-a60a36deda7f.png",
+      alt: "Depoimento Revolt Cliente"
+    }
+  },
+  {
+    icon: <ThumbsUp size={20} />,
+    title: "Site & Estoque - UR Perfumes",
+    color: "text-fuchsia-300",
+    desc: (
+      <>
+        <b>Desafio:</b> Automatizar vendas e estoque para não perder oportunidades.<br />
+        <b>Resultado:</b> "Um alívio real. Não perde mais venda e o envio tá rápido. Funcionando foda. Vlw mesmo!"
+      </>
+    ),
+    thumb: {
+      label: "🖼️ Print de conversa real - UR Perfumes:",
+      src: "/lovable-uploads/7bf769f2-f0ab-493b-8a3e-e150756ccff9.png",
+      alt: "Depoimento UR Perfumes"
+    }
+  },
+  {
+    icon: <ThumbsUp size={20} />,
+    title: "Leads automáticos - Vori SP",
+    color: "text-blue-300",
+    desc: (
+      <>
+        <b>Desafio:</b> Automatizar captação e resposta de leads.<br />
+        <b>Resultado:</b> "Contatos agora caem já com resposta pronta. Tá voando, valeu!"
+      </>
+    ),
+    thumb: {
+      label: "🖼️ Print de conversa real - Vori SP:",
+      src: "/lovable-uploads/7d28f03c-1329-403b-91b8-47ee2137ddd0.png",
+      alt: "Depoimento Vori SP"
+    }
+  },
+  {
+    icon: <ThumbsUp size={20} />,
+    title: "Rotina otimizada - Diana Salvador",
+    color: "text-pink-300",
+    desc: (
+      <>
+        <b>Desafio:</b> Ganhar tempo automatizando o que era repetitivo.<br />
+        <b>Resultado:</b> "O sistema salvou a rotina da equipe. Agora tá tudo no automático."
+      </>
+    ),
+    thumb: {
+      label: "🖼️ Print de conversa real - Diana Salvador:",
+      src: "/lovable-uploads/f53f6c81-6fa2-4069-b903-9830aa8bf4d7.png",
+      alt: "Depoimento Diana Salvador"
     }
   },
 ];
