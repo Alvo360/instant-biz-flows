@@ -1,6 +1,7 @@
 import { Zap, CalendarCheck2, Bot, Link2, Scissors, Users2, MessageSquare, Brain } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import * as React from "react";
+import { useMagneticScroll } from "@/hooks/useMagneticScroll";
 
 const testimonials = [
   {
@@ -167,6 +168,12 @@ const Index = () => {
   const [casesEmbla, setCasesEmbla] = React.useState<any>(null);
   useEmblaAutoplay(casesEmbla, 4500);
 
+  // --- Magnetic Scroll refs ---
+  const heroMagneticRef = useMagneticScroll(85);
+  const autoCardsMagneticRef = useMagneticScroll(65);
+  const casesMagneticRef = useMagneticScroll(50);
+  const depoMagneticRef = useMagneticScroll(47);
+
   return (
     <div className="relative min-h-screen py-8 px-0 bg-transparent flex flex-col">
       {/* Pontos de luz/glow */}
@@ -174,7 +181,7 @@ const Index = () => {
       <span className="glow red"></span>
       <span className="glow gray"></span>
       {/* HERO */}
-      <section className="flex flex-col items-center gap-8 z-10 pt-8">
+      <section ref={heroMagneticRef} className="flex flex-col items-center gap-8 z-10 pt-8">
         <div className="glass-card max-w-3xl w-full text-center p-10 flex flex-col items-center gap-5">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg mb-2 font-playfair">
             Automatize seu Negócio com Inteligência e Estilo
@@ -194,7 +201,7 @@ const Index = () => {
       </section>
 
       {/* O que automatizar */}
-      <section className="mt-10 mb-8 z-10">
+      <section ref={autoCardsMagneticRef} className="mt-10 mb-8 z-10">
         <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">O que você pode automatizar?</h2>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 px-4">
           <div className="glass-card p-5 flex flex-col gap-2 items-start">
@@ -228,8 +235,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Casos Reais - agora em CARROSSEL */}
-      <section className="mt-12 z-10">
+      {/* Casos Reais - CARROSSEL magnético */}
+      <section ref={casesMagneticRef} className="mt-12 z-10">
         <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">Casos Reais de Automação</h2>
         <div className="w-full px-4 flex">
           <Carousel
@@ -272,7 +279,7 @@ const Index = () => {
       </section>
 
       {/* Depoimentos */}
-      <section className="mt-14 z-10 w-full flex flex-col items-center">
+      <section ref={depoMagneticRef} className="mt-14 z-10 w-full flex flex-col items-center">
         <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">
           Depoimentos Verdadeiros
         </h2>
