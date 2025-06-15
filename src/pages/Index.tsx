@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import OqueAutomatizarSection from "@/components/sections/OqueAutomatizarSection";
@@ -42,10 +43,11 @@ function randomStars(num = 36) {
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen py-8 px-0 flex flex-col overflow-hidden"
+    <div
+      className="relative min-h-screen py-4 px-0 flex flex-col overflow-hidden"
       style={{
-        // Fundo principal agora bem mais leve
-        background: "radial-gradient(ellipse at 60% 72%, #ff225018 0%, #c21e5530 36%, #1a1823 80%, #000 100%)",
+        background:
+          "radial-gradient(ellipse at 60% 72%, #ff225018 0%, #c21e5530 36%, #1a1823 80%, #000 100%)",
       }}
     >
       {/* Fundo universo neon + n8n flow */}
@@ -63,27 +65,25 @@ const Index = () => {
             userSelect: "none"
           }}
           aria-hidden="true"
+          loading="eager"
+          width={900}
+          height={600}
         />
-        {/* Gradiente azul-escuro para suavizar e misturar o SVG */}
         <div
           className="absolute inset-0 w-full h-full transition-all duration-1000"
           style={{
-            background: "linear-gradient(120deg, #23263b 0%, #606eec40 50%, #23263b 100%)",
+            background:
+              "linear-gradient(120deg, #23263b 0%, #606eec40 50%, #23263b 100%)",
             opacity: 0.85,
             mixBlendMode: "lighten",
           }}
         />
-        {/* "Estrelas" animadas (continua) */}
         <div className="absolute inset-0 w-full h-full -z-10 pointer-events-none">
           {randomStars(40)}
         </div>
-        {/* Overlay dark (continua igual) */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/90 pointer-events-none z-10"></div>
       </div>
-      {/* Neon lateral "glow" para compor */}
       <span className="glow gray"></span>
-      {/* Mantém apenas a glow azul-acinzentada */}
-      {/* Seções */}
       <HeroSection />
       <OqueAutomatizarSection />
       <CasosReaisSection />

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,6 +12,14 @@ body {
     url('/n8n-flow-bg.svg') center center repeat-y,
     radial-gradient(ellipse at 60% 72%, #ff225018 0%, #c21e5530 36%, #240018 80%, #000 100%);
   background-size: cover, 900px 700px;
+}
+/* Adicionando font-display: swap nas fontes customizadas via Google Fonts, recomendado */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v36/nuFvD-vYSZviVYUb_rj3ij__anPXDTzYhKfcw65GGA.woff2') format('woff2');
 }
 h1, h2, .font-playfair {
   font-family: 'Playfair Display', 'serif';
@@ -42,6 +51,7 @@ h2 {
   padding: 0.9rem 2.2rem;
   font-size: 1.15rem;
   transition: transform 0.17s, box-shadow 0.22s;
+  min-width: 200px;
 }
 .glass-btn:hover {
   transform: translateY(-2px) scale(1.03);
@@ -83,7 +93,27 @@ h2 {
 @media (max-width: 900px) {
   .glass-card {
     border-radius: 1rem;
-    padding: 1rem !important;
+    padding: 0.6rem !important;
+  }
+  .glass-btn {
+    padding: 0.9rem 1.4rem;
+    font-size: 1rem;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .glass-card {
+    padding: 0.4rem !important;
+    border-radius: 0.6rem;
+  }
+  .glass-btn {
+    padding: 0.85rem 1.1rem;
+    font-size: 1rem;
+    min-width: 125px;
+  }
+  h1 {
+    font-size: 1.25rem;
   }
 }
 
@@ -98,3 +128,4 @@ h2 {
 
 .animate-pulse-xslow { animation: pulse-xslow 7s cubic-bezier(0.4,0,0.6,1) infinite; }
 .animate-pulse-slow { animation: pulse-slow 3s cubic-bezier(0.4,0,0.6,1) infinite; }
+
