@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import OqueAutomatizarSection from "@/components/sections/OqueAutomatizarSection";
@@ -45,42 +44,46 @@ const Index = () => {
   return (
     <div className="relative min-h-screen py-8 px-0 flex flex-col overflow-hidden"
       style={{
-        background: "radial-gradient(ellipse at 60% 72%, #ff225021 0%, #c21e55 36%, #240018 80%, #000 100%)",
-        /* O radial-gradient reforça o vermelho neon central e fecha para preto */
+        // Fundo principal agora bem mais leve
+        background: "radial-gradient(ellipse at 60% 72%, #ff225018 0%, #c21e5530 36%, #1a1823 80%, #000 100%)",
       }}
     >
-      {/* Fundo universo neon vermelho */}
+      {/* Fundo universo neon + n8n flow */}
       <div className="absolute inset-0 w-full h-full pointer-events-none -z-10">
-        {/* Gradiente "neon universe" vermelho/rosa vertical + animação */}
+        {/* SVG translucido do "flow" n8n */}
+        <img
+          src="/n8n-flow-bg.svg"
+          alt="n8n flow background"
+          className="absolute inset-0 w-full h-full object-cover opacity-70 select-none"
+          style={{
+            zIndex: 1,
+            pointerEvents: "none",
+            mixBlendMode: "lighten",
+            objectFit: "cover",
+            userSelect: "none"
+          }}
+          aria-hidden="true"
+        />
+        {/* Gradiente azul-escuro para suavizar e misturar o SVG */}
         <div
           className="absolute inset-0 w-full h-full transition-all duration-1000"
           style={{
-            background: "linear-gradient(120deg, #2a0015 0%, #ff225097 50%, #ed1479 90%, #30002a 100%)",
+            background: "linear-gradient(120deg, #23263b 0%, #606eec40 50%, #23263b 100%)",
             opacity: 0.85,
             mixBlendMode: "lighten",
           }}
         />
-        {/* Animar blobs neon */}
-        {neonBlobs.map((blob, i) => (
-          <div
-            key={i}
-            className={`absolute rounded-full ${blob.style} ${blob.blur} ${blob.opacity} ${blob.animate}`}
-            style={{ filter: "saturate(2.3) brightness(1.27)" }}
-          />
-        ))}
-        {/* "Estrelas" animadas do universo */}
+        {/* "Estrelas" animadas (continua) */}
         <div className="absolute inset-0 w-full h-full -z-10 pointer-events-none">
           {randomStars(40)}
         </div>
-        {/* Overlay dark para melhorar contraste/legibilidade */}
+        {/* Overlay dark (continua igual) */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/90 pointer-events-none z-10"></div>
       </div>
-
       {/* Neon lateral "glow" para compor */}
-      <span className="glow red"></span>
       <span className="glow gray"></span>
-      {/* O azul removido para manter tudo mais vermelho */}
-
+      {/* Mantém apenas a glow azul-acinzentada */}
+      {/* Seções */}
       <HeroSection />
       <OqueAutomatizarSection />
       <CasosReaisSection />
@@ -93,4 +96,3 @@ const Index = () => {
 };
 
 export default Index;
-
