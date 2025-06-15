@@ -3,24 +3,28 @@ import { Zap } from "lucide-react";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 
-const LateralLogo = () => (
+// Novo componente para o logo fixo no canto superior esquerdo
+const FixedTopLeftLogo = () => (
   <div
-    className="hidden sm:block fixed top-1/2 left-6 -translate-y-1/2 z-40 select-none"
+    className="fixed top-4 left-4 z-50 select-none flex flex-col items-center group"
     style={{
       transition: "transform 0.18s, filter 0.25s",
     }}
   >
-    <a href="/" aria-label="Alvo 360" tabIndex={0}>
+    <a href="/" aria-label="Alvo 360" tabIndex={0} className="flex flex-col items-center">
       <img
         src="/lovable-uploads/887a228c-1a9e-4823-8ccf-25bef380207c.png"
         alt="Logo Alvo 360"
-        className="w-20 h-auto rounded-full object-contain drop-shadow-lg hover:scale-110 hover:drop-shadow-[0_0_18px_#4386e6dd] hover:brightness-125 transition-transform transition-shadow duration-200 ease-in-out"
+        className="w-16 sm:w-20 h-auto rounded-full object-contain drop-shadow-lg
+          transition-transform transition-shadow duration-200 ease-in-out
+          group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_#4386e6cc]
+          group-hover:brightness-125"
         style={{
-          boxShadow: "0 4px 16px #18356315",
+          boxShadow: "0 4px 16px #18356320",
           maxWidth: 80,
         }}
       />
-      <div className="text-white text-md font-bold font-playfair mt-2 text-center tracking-wider drop-shadow-md hover:text-primary/80 transition-colors duration-200">
+      <div className="text-white text-xs sm:text-md font-bold font-playfair mt-1 sm:mt-2 text-center tracking-wider drop-shadow-md group-hover:text-primary/80 transition-colors duration-200">
         Alvo 360
       </div>
     </a>
@@ -30,10 +34,10 @@ const LateralLogo = () => (
 const HeroSection = () => {
   return (
     <>
-      <LateralLogo />
+      <FixedTopLeftLogo />
       <section className="flex flex-col items-center gap-6 z-10 pt-8 px-2 md:px-0">
         <div className="glass-card max-w-3xl w-full text-center p-6 md:p-10 flex flex-col items-center gap-4 md:gap-6 animate-fade-in">
-          {/* Logo mobile (mantém branding no topo para mobile) */}
+          {/* Logo para mobile só aparece se não for desktop */}
           <img
             src="/lovable-uploads/887a228c-1a9e-4823-8ccf-25bef380207c.png"
             alt="Logo Alvo 360"
@@ -85,3 +89,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
