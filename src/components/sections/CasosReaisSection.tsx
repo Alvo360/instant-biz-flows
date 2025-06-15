@@ -1,4 +1,3 @@
-
 import { Users2, Scissors, MessageSquare, ThumbsUp } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import * as React from "react";
@@ -123,25 +122,36 @@ const cases = [
   },
 ];
 
+const AUTO_PLAY_DELAY = 8000; // 8 segundos
+
 const CasosReaisSection = () => {
   const [casesEmbla, setCasesEmbla] = React.useState<any>(null);
+  const [paused, setPaused] = React.useState(false);
 
-  // Autoplay do carrossel
   React.useEffect(() => {
     if (!casesEmbla) return;
     let timeout: any = null;
+
     const play = () => {
-      timeout = setTimeout(() => {
-        casesEmbla.scrollNext();
-      }, 4500);
+      if (!paused) {
+        timeout = setTimeout(() => {
+          casesEmbla.scrollNext();
+        }, AUTO_PLAY_DELAY);
+      }
     };
     casesEmbla.on("select", play);
     play();
+
     return () => {
       casesEmbla.off("select", play);
       clearTimeout(timeout);
     };
-  }, [casesEmbla]);
+  }, [casesEmbla, paused]);
+
+  // handlers para pausar ao pressionar/clicar/tocar no carrossel
+  const handlePointerDown = () => setPaused(true);
+  const handlePointerUp = () => setPaused(false);
+  const handleMouseLeave = () => setPaused(false);
 
   return (
     <section className="mt-12 z-10">
@@ -155,7 +165,14 @@ const CasosReaisSection = () => {
           setApi={setCasesEmbla}
           className="w-full max-w-3xl mx-auto"
         >
-          <CarouselContent>
+          <CarouselContent
+            // Para compatibilidade com mouse/touch
+            onMouseDown={handlePointerDown}
+            onMouseUp={handlePointerUp}
+            onTouchStart={handlePointerDown}
+            onTouchEnd={handlePointerUp}
+            onMouseLeave={handleMouseLeave}
+          >
             {cases.map((c, i) => (
               <CarouselItem
                 key={i}
