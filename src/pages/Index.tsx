@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import ComoFuncionaSection from "@/components/sections/ComoFuncionaSection";
@@ -93,6 +92,12 @@ const Index = () => {
       <SobreSection />
       <ChamadaFinalSection />
       <DicaSection />
+      {/* Rodapé discreto com assinatura Alvo 360 */}
+      <footer className="w-full text-center mt-4 mb-2 z-20">
+        <span className="text-xs text-slate-500 tracking-wide select-none" style={{ letterSpacing: "0.04em" }}>
+          Alvo 360
+        </span>
+      </footer>
     </div>
   );
 };
