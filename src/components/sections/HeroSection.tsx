@@ -1,5 +1,7 @@
+
 import { Zap } from "lucide-react";
 import * as React from "react";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
@@ -16,23 +18,27 @@ const HeroSection = () => {
           <br />
           Soluções personalizadas em automação, integrações e inteligência artificial sob medida. Tudo visual, transparente e sem código complexo.
         </p>
-        <a
-          href="https://wa.me/5519971259836?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20automa%C3%A7%C3%A3o."
-          className="glass-btn flex gap-2 items-center mt-3 shadow-glass text-base xs:text-lg px-8 py-4 md:py-3"
+        <Button
+          asChild
+          className="relative flex gap-2 items-center justify-center w-full max-w-xs md:max-w-fit shadow-lg font-semibold text-lg py-4 md:py-3 rounded-full bg-gradient-to-r from-[#70a1e9] to-[#22293d] hover:from-[#233a6e] hover:to-[#2563eb] transition-all duration-200"
           style={{
-            background: "linear-gradient(90deg,#70a1e9 0,#22293d 100%)",
-            fontSize: "1.2rem",
-            minHeight: "58px",
-            minWidth: "220px",
+            minHeight: "54px",
+            fontSize: "1.18rem",
             borderRadius: "2.2rem",
-            boxShadow: "0 2px 12px #4386e685"
+            boxShadow: "0 2px 18px #4386e695",
           }}
-          target="_blank"
-          rel="noopener"
         >
-          <Zap size={24} />
-          💸 Peça seu orçamento
-        </a>
+          <a
+            href="https://wa.me/5519971259836?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20automa%C3%A7%C3%A3o."
+            target="_blank"
+            rel="noopener"
+            className="flex gap-2 items-center justify-center w-full h-full"
+            aria-label="Solicite seu orçamento personalizado pelo WhatsApp"
+          >
+            <Zap size={22} /> 
+            Solicite seu orçamento personalizado
+          </a>
+        </Button>
         <div className="flex flex-wrap gap-2 justify-center text-xs mt-4 text-slate-400 font-normal">
           <span className="px-3 py-1 rounded bg-black/20 backdrop-blur-sm">Atendimento <b>pessoal</b> e <b>rápido</b></span>
           <span className="px-3 py-1 rounded bg-black/15">Integrações com WhatsApp, E-mail, CRM e mais</span>
