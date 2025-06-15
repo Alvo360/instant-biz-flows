@@ -84,8 +84,8 @@ h2 {
   52% { transform: scale(1.16) translateY(10px); opacity: 1; }
 }
 @keyframes pulse-slow {
-  0%, 100% { transform: scale(1) opacity: 0.90; }
-  52% { transform: scale(0.92) opacity: 0.80; }
+  0%, 100% { transform: scale(1); opacity: 0.90; }
+  52% { transform: scale(0.92); opacity: 0.80; }
 }
 
 .animate-pulse-xslow { animation: pulse-xslow 7s cubic-bezier(0.4,0,0.6,1) infinite; }
