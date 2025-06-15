@@ -1,3 +1,4 @@
+
 import { Users2, Scissors, MessageSquare, ThumbsUp } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import * as React from "react";
@@ -7,7 +8,7 @@ const cases = [
   {
     icon: <Users2 size={20} />,
     title: "Loja automatizada com WhatsApp",
-    color: "text-indigo-300",
+    color: "#0A1C3C", // atualizado
     desc: (
       <>
         <b>Desafio:</b> Loja online gastando muito tempo atendendo manualmente clientes no WhatsApp.<br />
@@ -24,7 +25,7 @@ const cases = [
   {
     icon: <Scissors size={20} />,
     title: "Barbearia com agendamento automático",
-    color: "text-blue-400",
+    color: "#0A1C3C", // atualizado
     desc: (
       <>
         <b>Desafio:</b> Barbearia perdendo horários por falta de organização nos agendamentos.<br />
@@ -41,7 +42,7 @@ const cases = [
   {
     icon: <MessageSquare size={20} />,
     title: "Pix mais rápido via WhatsApp",
-    color: "text-green-400",
+    color: "#0A1C3C", // atualizado
     desc: (
       <>
         <b>Desafio:</b> Receber pagamentos e confirmações de agendamento de forma manual, demorando para os clientes e para o negócio.<br />
@@ -59,7 +60,7 @@ const cases = [
   {
     icon: <ThumbsUp size={20} />,
     title: "Automação de energia - Revolt Cliente",
-    color: "text-violet-300",
+    color: "#0A1C3C", // atualizado
     desc: (
       <>
         <b>Desafio:</b> Otimizar e economizar energia com automação sob medida.<br />
@@ -75,7 +76,7 @@ const cases = [
   {
     icon: <ThumbsUp size={20} />,
     title: "Site & Estoque - UR Perfumes",
-    color: "text-fuchsia-300",
+    color: "#0A1C3C", // atualizado
     desc: (
       <>
         <b>Desafio:</b> Automatizar vendas e estoque para não perder oportunidades.<br />
@@ -91,7 +92,7 @@ const cases = [
   {
     icon: <ThumbsUp size={20} />,
     title: "Leads automáticos - Vori SP",
-    color: "text-blue-300",
+    color: "#0A1C3C", // atualizado
     desc: (
       <>
         <b>Desafio:</b> Automatizar captação e resposta de leads.<br />
@@ -107,7 +108,7 @@ const cases = [
   {
     icon: <ThumbsUp size={20} />,
     title: "Rotina otimizada - Diana Salvador",
-    color: "text-pink-300",
+    color: "#0A1C3C", // atualizado
     desc: (
       <>
         <b>Desafio:</b> Ganhar tempo automatizando o que era repetitivo.<br />
@@ -179,7 +180,10 @@ const CasosReaisSection = () => {
                 className="basis-full md:basis-1/2 flex"
               >
                 <div className="glass-card flex-1 p-7 flex flex-col gap-3 animate-fade-in h-full">
-                  <div className={`flex items-center gap-2 mb-1 font-semibold ${c.color}`}>
+                  <div
+                    className="flex items-center gap-2 mb-1 font-semibold"
+                    style={{ color: c.color }}
+                  >
                     {c.icon} {c.title}
                   </div>
                   <div className="text-sm text-slate-200 mb-2">{c.desc}</div>
@@ -202,3 +206,4 @@ const CasosReaisSection = () => {
 };
 
 export default CasosReaisSection;
+
