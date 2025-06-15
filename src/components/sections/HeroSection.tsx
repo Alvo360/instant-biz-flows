@@ -29,7 +29,7 @@ const HeroSection = () => {
           }}
         >
           <a
-            href="https://wa.me/5519971259836?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20automa%C3%A7%C3%A3o."
+            href="https://api.whatsapp.com/send?phone=5519971259836&text=Ol%C3%A1%2C+eu+quero+solicitar+or%C3%A7amento+para+automa%C3%A7%C3%A3o"
             target="_blank"
             rel="noopener"
             className="flex gap-2 items-center justify-center w-full h-full"
