@@ -1,11 +1,25 @@
-
 import { Brain, Zap, Link2, Users2 } from "lucide-react";
 import * as React from "react";
 
 const SobreSection = () => (
   <section className="mt-20 z-10 flex justify-center px-4">
     <div className="glass-card max-w-3xl w-full p-10 flex flex-col gap-3 items-center text-center">
-      <h2 className="text-2xl font-bold text-white mb-2 font-playfair">Sobre mim</h2>
+      <h2
+        className="
+          text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-center select-none
+          font-playfair bg-gradient-to-r from-[#ff2250] via-fuchsia-500 to-[#ed1479] bg-clip-text text-transparent
+          drop-shadow-[0_4px_40px_#ff2250cc] px-3 pb-2
+          border-b-[3.5px] border-fuchsia-500 max-w-fit mx-auto
+          animate-pulse-slow
+        "
+        style={{
+          textShadow: "0 0 32px #ff66c1, 0 0 8px #ed1479",
+          letterSpacing: "-0.01em",
+          filter: "drop-shadow(0 3px 14px #ff225063)",
+        }}
+      >
+        Sobre mim
+      </h2>
       <p className="text-slate-200 text-base font-light mb-2">
         Sou especialista em <b>automação inteligente para negócios</b>.<br/>
         Minha missão é entregar soluções que simplificam rotinas e geram resultados reais.

@@ -107,7 +107,20 @@ const DepoimentosSection = () => {
 
   return (
     <section className="mt-14 z-10 w-full flex flex-col items-center">
-      <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">
+      <h2
+        className="
+          text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-center select-none
+          font-playfair bg-gradient-to-r from-[#ff2250] via-fuchsia-500 to-[#ed1479] bg-clip-text text-transparent
+          drop-shadow-[0_4px_40px_#ff2250cc] px-3 pb-2
+          border-b-[3.5px] border-fuchsia-500 max-w-fit mx-auto
+          animate-pulse-slow
+        "
+        style={{
+          textShadow: "0 0 32px #ff66c1, 0 0 8px #ed1479",
+          letterSpacing: "-0.01em",
+          filter: "drop-shadow(0 3px 14px #ff225063)",
+        }}
+      >
         Depoimentos Verdadeiros
       </h2>
       <div className="w-full px-4 flex">
