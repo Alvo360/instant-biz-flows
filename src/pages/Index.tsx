@@ -94,7 +94,13 @@ const Index = () => {
       <DicaSection />
       {/* Rodapé discreto com assinatura Alvo 360 */}
       <footer className="w-full text-center mt-4 mb-2 z-20">
-        <span className="text-xs text-slate-500 tracking-wide select-none" style={{ letterSpacing: "0.04em" }}>
+        <span
+          className="text-xs sm:text-sm font-playfair select-none px-3 py-1 rounded-full bg-gradient-to-r from-[#ff2250] via-[#ed1479] to-[#0A1C3C] bg-clip-text text-transparent shadow-sm tracking-widest"
+          style={{
+            letterSpacing: "0.13em",
+            textShadow: "0 2px 18px #ff224040, 0 1px 1px #ffffff16"
+          }}
+        >
           Alvo 360
         </span>
       </footer>
