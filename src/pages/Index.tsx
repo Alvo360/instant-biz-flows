@@ -1,6 +1,7 @@
 
 import * as React from "react";
 import HeroSection from "@/components/sections/HeroSection";
+import ComoFuncionaSection from "@/components/sections/ComoFuncionaSection";
 import OqueAutomatizarSection from "@/components/sections/OqueAutomatizarSection";
 import CasosReaisSection from "@/components/sections/CasosReaisSection";
 import DepoimentosSection from "@/components/sections/DepoimentosSection";
@@ -85,6 +86,7 @@ const Index = () => {
       </div>
       <span className="glow gray"></span>
       <HeroSection />
+      <ComoFuncionaSection />
       <OqueAutomatizarSection />
       <CasosReaisSection />
       <DepoimentosSection />
