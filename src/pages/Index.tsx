@@ -57,7 +57,7 @@ const Index = () => {
           style={{
             background: "linear-gradient(120deg, #2a0015 0%, #ff225097 50%, #ed1479 90%, #30002a 100%)",
             opacity: 0.85,
-            mixBlendMode: "lighter",
+            mixBlendMode: "lighten",
           }}
         />
         {/* Animar blobs neon */}
