@@ -92,13 +92,25 @@ const Index = () => {
       <SobreSection />
       <ChamadaFinalSection />
       <DicaSection />
-      {/* Rodapé discreto com assinatura Alvo 360 */}
+      {/* Rodapé discreto, porém chamativo, com assinatura Alvo 360 */}
       <footer className="w-full text-center mt-4 mb-2 z-20">
         <span
-          className="text-xs sm:text-sm font-playfair select-none px-3 py-1 rounded-full bg-gradient-to-r from-[#ff2250] via-[#ed1479] to-[#0A1C3C] bg-clip-text text-transparent shadow-sm tracking-widest"
+          className="
+            inline-block
+            font-playfair font-extrabold tracking-widest text-xs sm:text-sm uppercase
+            px-5 py-1 rounded-full
+            bg-gradient-to-r from-[#ff2250] via-[#ed1479] to-[#0A1C3C]
+            bg-clip-text text-transparent
+            drop-shadow-[0_3px_16px_#ff227088]
+            shadow-lg
+            transition-transform duration-150 hover:scale-110
+            outline-none select-none
+          "
           style={{
-            letterSpacing: "0.13em",
-            textShadow: "0 2px 18px #ff224040, 0 1px 1px #ffffff16"
+            letterSpacing: "0.15em",
+            textShadow:
+              "0 2px 18px #ff224090, 0 1px 1px #ffffff33, 0 0px 6px #ff225099, 0 0px 12px #8a338799",
+            filter: "drop-shadow(0 1px 14px #ed147935)",
           }}
         >
           Alvo 360
