@@ -6,6 +6,7 @@ import DepoimentosSection from "@/components/sections/DepoimentosSection";
 import SobreSection from "@/components/sections/SobreSection";
 import ChamadaFinalSection from "@/components/sections/ChamadaFinalSection";
 import DicaSection from "@/components/sections/DicaSection";
+import DemoVisualSection from "@/components/sections/DemoVisualSection";
 
 const neonBlobs = [
   // Blobs bem vermelhos/neon para reforçar o efeito
@@ -85,6 +86,7 @@ const Index = () => {
       {/* Mantém apenas a glow azul-acinzentada */}
       {/* Seções */}
       <HeroSection />
+      <DemoVisualSection />
       <OqueAutomatizarSection />
       <CasosReaisSection />
       <DepoimentosSection />
