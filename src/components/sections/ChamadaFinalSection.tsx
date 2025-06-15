@@ -8,7 +8,7 @@ const ChamadaFinalSection = () => (
       <h2 className="text-2xl font-bold text-white mb-4 font-playfair">Pronto para automatizar?</h2>
       <div className="flex flex-wrap gap-3 items-center justify-center">
         <a
-          href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Quero%20falar%20sobre%20automa%C3%A7%C3%A3o%20para%20meu%20neg%C3%B3cio."
+          href="https://wa.me/5519971259836?text=Ol%C3%A1!%20Quero%20falar%20sobre%20automa%C3%A7%C3%A3o%20para%20meu%20neg%C3%B3cio."
           className="glass-btn flex gap-2 items-center justify-center shadow-glass"
           target="_blank"
           rel="noopener"
@@ -17,7 +17,7 @@ const ChamadaFinalSection = () => (
           💬 Fale comigo pelo WhatsApp
         </a>
         <a
-          href="https://instagram.com/SEUINSTAGRAM"
+          href="https://www.instagram.com/alvo360/"
           className="glass-btn flex gap-2 items-center justify-center shadow-glass !bg-gradient-to-r !from-pink-500 !to-yellow-400"
           style={{
             minWidth: "44px",
