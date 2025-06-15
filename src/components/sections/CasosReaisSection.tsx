@@ -1,7 +1,5 @@
-
 import { Users2, Scissors, MessageSquare } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { useMagneticScroll } from "@/hooks/useMagneticScroll";
 import * as React from "react";
 
 // Casos reais (pode ser movido para um arquivo data...)
@@ -60,7 +58,6 @@ const cases = [
 ];
 
 const CasosReaisSection = () => {
-  const casesMagneticRef = useMagneticScroll(50);
   const [casesEmbla, setCasesEmbla] = React.useState<any>(null);
 
   // Autoplay do carrossel
@@ -81,7 +78,7 @@ const CasosReaisSection = () => {
   }, [casesEmbla]);
 
   return (
-    <section ref={casesMagneticRef} className="mt-12 z-10">
+    <section className="mt-12 z-10">
       <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">Casos Reais de Automação</h2>
       <div className="w-full px-4 flex">
         <Carousel

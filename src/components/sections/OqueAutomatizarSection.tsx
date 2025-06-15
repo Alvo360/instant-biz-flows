@@ -1,13 +1,13 @@
 
 import { Zap, CalendarCheck2, Bot, Link2 } from "lucide-react";
-import { useMagneticScroll } from "@/hooks/useMagneticScroll";
+// Removido: import { useMagneticScroll } from "@/hooks/useMagneticScroll";
 import * as React from "react";
 
 const OqueAutomatizarSection = () => {
-  const autoCardsMagneticRef = useMagneticScroll(65);
+  // Removido: const autoCardsMagneticRef = useMagneticScroll(65);
 
   return (
-    <section ref={autoCardsMagneticRef} className="mt-10 mb-8 z-10">
+    <section className="mt-10 mb-8 z-10">
       <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">O que você pode automatizar?</h2>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 px-4">
         <div className="glass-card p-5 flex flex-col gap-2 items-start">
@@ -44,3 +44,4 @@ const OqueAutomatizarSection = () => {
 };
 
 export default OqueAutomatizarSection;
+

@@ -1,13 +1,13 @@
 
 import { Zap } from "lucide-react";
-import { useMagneticScroll } from "@/hooks/useMagneticScroll";
+// Removido: import { useMagneticScroll } from "@/hooks/useMagneticScroll";
 import * as React from "react";
 
 const HeroSection = () => {
-  const heroMagneticRef = useMagneticScroll(85);
+  // Removido: const heroMagneticRef = useMagneticScroll(85);
 
   return (
-    <section ref={heroMagneticRef} className="flex flex-col items-center gap-8 z-10 pt-8">
+    <section className="flex flex-col items-center gap-8 z-10 pt-8">
       <div className="glass-card max-w-3xl w-full text-center p-10 flex flex-col items-center gap-5">
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg mb-2 font-playfair">
           Automatize seu Negócio com Inteligência e Estilo
@@ -29,3 +29,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

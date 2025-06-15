@@ -1,7 +1,5 @@
-
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { MessageSquare } from "lucide-react";
-import { useMagneticScroll } from "@/hooks/useMagneticScroll";
 import * as React from "react";
 
 const testimonials = [
@@ -88,7 +86,6 @@ const testimonials = [
 ];
 
 const DepoimentosSection = () => {
-  const depoMagneticRef = useMagneticScroll(47);
   const [emblaApi, setEmblaApi] = React.useState<any>(null);
 
   // Autoplay do carrossel
@@ -109,7 +106,7 @@ const DepoimentosSection = () => {
   }, [emblaApi]);
 
   return (
-    <section ref={depoMagneticRef} className="mt-14 z-10 w-full flex flex-col items-center">
+    <section className="mt-14 z-10 w-full flex flex-col items-center">
       <h2 className="text-2xl font-bold text-white mb-7 text-center font-playfair">
         Depoimentos Verdadeiros
       </h2>
