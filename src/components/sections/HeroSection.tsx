@@ -11,14 +11,7 @@ const HeroSection = () => {
       {/* Logo fixa removida */}
       <section className="flex flex-col items-center gap-6 z-10 pt-8 px-2 md:px-0">
         <div className="glass-card max-w-3xl w-full text-center p-6 md:p-10 flex flex-col items-center gap-4 md:gap-6 animate-fade-in">
-          {/* Logo para mobile só aparece se não for desktop */}
-          <img
-            src="/lovable-uploads/887a228c-1a9e-4823-8ccf-25bef380207c.png"
-            alt="Logo Alvo 360"
-            className="mb-4 w-40 h-auto md:w-56 mx-auto drop-shadow-lg object-contain sm:hidden"
-            style={{ maxWidth: "210px" }}
-            loading="eager"
-          />
+          {/* Logo para mobile removida */}
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg font-playfair leading-tight mb-2 md:mb-4">
             Automatizo os processos do seu negócio com n8n para você ganhar tempo e escalar
           </h1>

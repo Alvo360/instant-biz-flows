@@ -1,3 +1,4 @@
+
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { MessageSquare } from "lucide-react";
 import * as React from "react";
@@ -121,7 +122,7 @@ const DepoimentosSection = () => {
           filter: "none"
         }}
       >
-        Depoimentos Verdadeiros
+        Depoimentos
       </h2>
       <div className="w-full px-4 flex">
         <Carousel
@@ -158,3 +159,4 @@ const DepoimentosSection = () => {
 };
 
 export default DepoimentosSection;
+
